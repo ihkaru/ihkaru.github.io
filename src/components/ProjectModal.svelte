@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { ProjectItem, Locale } from '../types/portfolio';
   import { X, Github, ArrowUpRight, CheckCircle2, Cpu, ShieldAlert, Zap } from 'lucide-svelte';
+  import AppVisualPreview from './AppVisualPreview.svelte';
   import { onMount, onDestroy } from 'svelte';
 
   interface Props {
@@ -72,6 +73,11 @@
         <p class="text-sm sm:text-base text-neutral-300 font-reading leading-relaxed">
           {project.subtitle[locale]}
         </p>
+      </div>
+
+      <!-- Living Architecture / App Visual Preview -->
+      <div class="py-1">
+        <AppVisualPreview {project} {locale} isModal={true} />
       </div>
 
       <!-- Problem Statement & Solution -->

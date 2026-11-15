@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { ProjectItem, Locale } from '../types/portfolio';
   import { ArrowUpRight, Github, Terminal } from 'lucide-svelte';
+  import AppVisualPreview from './AppVisualPreview.svelte';
 
   interface Props {
     project: ProjectItem;
@@ -18,14 +19,19 @@
   };
 </script>
 
-<div class="group flex flex-col justify-between rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 transition-all hover:border-neutral-700 hover:bg-neutral-900/70">
+<div class="group flex flex-col justify-between rounded-xl border border-neutral-800 bg-neutral-900/40 p-5 sm:p-6 transition-all hover:border-neutral-700 hover:bg-neutral-900/70 space-y-4">
   <div class="space-y-4">
+    <!-- Visual Living App Preview Window -->
+    <div class="transition-transform duration-200 group-hover:scale-[1.01]">
+      <AppVisualPreview {project} {locale} isModal={false} />
+    </div>
+
     <!-- Header: Category & Priority -->
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between pt-1">
       <span class="inline-flex rounded-md border px-2 py-0.5 font-mono text-[11px] font-medium {categoryColor[project.category] || 'border-neutral-800 text-neutral-400'}">
         {project.category.toUpperCase()}
       </span>
-      <span class="font-mono text-xs text-neutral-500">#{project.priority}</span>
+      <span class="font-mono text-xs text-neutral-500">priority: #{project.priority}</span>
     </div>
 
     <!-- Title & Subtitle -->
