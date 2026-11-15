@@ -3,7 +3,7 @@
   import { 
     Terminal, Shield, Cpu, ExternalLink, CheckCircle2, RotateCw, 
     Sparkles, Database, FileText, Check, Lock, Sliders, Smartphone,
-    Laptop, Globe, ArrowRight
+    Laptop, Globe, ArrowRight, Bot, CheckCheck
   } from 'lucide-svelte';
 
   interface Props {
@@ -55,7 +55,9 @@
       <div class="max-w-md mx-auto w-full space-y-2.5 font-sans">
         <div class="flex items-center justify-between text-xs pb-1 border-b border-neutral-850">
           <div class="flex items-center gap-2">
-            <div class="h-6 w-6 rounded-full bg-emerald-600 flex items-center justify-center text-[10px] font-bold text-white">🌸</div>
+            <div class="h-6 w-6 rounded-full bg-emerald-600 flex items-center justify-center text-white">
+              <Bot class="h-3.5 w-3.5" />
+            </div>
             <div>
               <div class="font-semibold text-white text-xs">Aina (BPS Mempawah)</div>
               <div class="text-[10px] text-emerald-400">online • agy agent active</div>
@@ -78,8 +80,14 @@
           <!-- Outbound -->
           <div class="rounded-lg bg-emerald-950/40 border border-emerald-800/40 p-2.5 max-w-[88%] ml-auto space-y-1">
             <div class="flex items-center justify-between text-[10px] text-emerald-400 font-mono">
-              <span>🌸 Aina</span>
-              <span>09:42 ✓✓</span>
+              <span class="flex items-center gap-1">
+                <Bot class="h-3 w-3" />
+                <span>Aina</span>
+              </span>
+              <span class="flex items-center gap-1">
+                <span>09:42</span>
+                <CheckCheck class="h-3 w-3 text-emerald-400" />
+              </span>
             </div>
             <p class="text-neutral-100">
               {locale === 'id'
@@ -276,7 +284,10 @@
             <div class="space-y-1">
               <div class="flex items-center justify-between text-[10px] text-teal-400 font-bold">
                 <span>PERTANYAAN (QUIZ ITEM)</span>
-                <span class="text-neutral-500">Klik untuk balik ↻</span>
+                <span class="text-neutral-500 flex items-center gap-1">
+                  <RotateCw class="h-3 w-3" />
+                  <span>Klik untuk balik</span>
+                </span>
               </div>
               <p class="text-white font-sans text-xs sm:text-sm">
                 "Mengapa arsitektur heksagonal mengisolasi domain logic dari framework database?"
@@ -289,7 +300,10 @@
             <div class="space-y-1">
               <div class="flex items-center justify-between text-[10px] text-emerald-400 font-bold">
                 <span>JAWABAN & KEY TAKEAWAY</span>
-                <span class="text-neutral-500">Klik untuk balik ↻</span>
+                <span class="text-neutral-500 flex items-center gap-1">
+                  <RotateCw class="h-3 w-3" />
+                  <span>Klik untuk balik</span>
+                </span>
               </div>
               <p class="text-emerald-200 font-sans text-xs sm:text-sm">
                 "Agar domain business logic dapat diuji 100% tanpa mock I/O dan tidak terikat vendor database tertentu."

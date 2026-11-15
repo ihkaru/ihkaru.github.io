@@ -4,7 +4,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'aina',
     slug: 'aina',
-    title: '🌸 Aina (あいな)',
+    title: 'Aina (あいな)',
+    iconKey: 'bot',
     subtitle: {
       id: 'Asisten AI rekan kerja otonom di WhatsApp bertenaga Google Antigravity CLI dalam Pure Rust 2024.',
       en: 'Self-hosted agentic AI co-worker in WhatsApp powered by Google Antigravity CLI in Pure Rust 2024.'
@@ -52,7 +53,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'cerdas',
     slug: 'cerdas',
-    title: '🧠 Cerdas',
+    title: 'Cerdas',
+    iconKey: 'database',
     subtitle: {
       id: 'Alternatif open-source mandiri AppSheet untuk pendataan survei mobile offline-first tanpa batasan pengguna.',
       en: 'Open-source self-hosted AppSheet alternative for offline-first mobile data collection with zero user limits.'
@@ -99,7 +101,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'lumis',
     slug: 'lumis',
-    title: '⚡ Lumis',
+    title: 'Lumis',
+    iconKey: 'cpu',
     subtitle: {
       id: 'Platform percakapan & orkestrasi AI enterprise berkinerja tinggi dalam Pure Rust & Svelte 5 dengan footprint <25MB RAM.',
       en: 'High-performance enterprise AI chat & orchestration platform in Pure Rust & Svelte 5 (<25MB RAM footprint).'
@@ -147,7 +150,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'propylon',
     slug: 'propylon',
-    title: '🛡️ Propylon Gateway',
+    title: 'Propylon Gateway',
+    iconKey: 'shield',
     subtitle: {
       id: 'Reverse proxy, kontrol firewall, dan gateway data Zero-Trust untuk Model Context Protocol (MCP) dalam Pure Rust.',
       en: 'Enterprise-grade zero-trust reverse proxy, firewall, and data gateway for Model Context Protocol (MCP) in Pure Rust.'
@@ -194,7 +198,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'ridm',
     slug: 'ridm-sso',
-    title: '🦀 SSO BPS Mempawah (rIDM)',
+    title: 'SSO BPS Mempawah (rIDM)',
+    iconKey: 'key',
     subtitle: {
       id: 'Central Identity Provider (IdP) terpadu berbasis Rust dengan native SAML 2.0 dan OpenID Connect (40-60MB RAM).',
       en: 'Ultra-fast Central Identity Provider in Rust supporting native SAML 2.0 and OpenID Connect (40-60MB RAM).'
@@ -242,7 +247,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'flashlearn',
     slug: 'flashlearn',
-    title: '⚡ FlashLearn',
+    title: 'FlashLearn',
+    iconKey: 'graduation-cap',
     subtitle: {
       id: 'Platform active-recall berbasis arsitektur heksagonal memadukan bacaan teori, kuis interaktif, dan 3D flashcards instan.',
       en: 'Hexagonal active-recall educational platform combining theoretical readings, quizzes, and instant 3D tactile flashcards.'
@@ -289,7 +295,8 @@ export const projects: ProjectItem[] = [
   {
     id: 'dokterv',
     slug: 'dokter-v',
-    title: '📋 Dokter-V (Sikendis)',
+    title: 'Dokter-V (Sikendis)',
+    iconKey: 'file-spreadsheet',
     subtitle: {
       id: 'Platform tata kelola penugasan, perjalanan dinas, kepatuhan batas honor SBM 2026, dan Laporan Perjalanan Dinas AI.',
       en: 'Financial and field assignment governance framework with SBM 2026 honor limits validation and AI report generator.'

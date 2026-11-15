@@ -1,5 +1,14 @@
 export type ProjectCategory = 'systems' | 'ai' | 'enterprise' | 'education';
 
+export type ProjectIconKey = 
+  | 'bot' 
+  | 'database' 
+  | 'cpu' 
+  | 'shield' 
+  | 'key' 
+  | 'graduation-cap' 
+  | 'file-spreadsheet';
+
 export interface ProjectMetric {
   label: string;
   value: string;
@@ -16,6 +25,7 @@ export interface ProjectItem {
   id: string;
   slug: string;
   title: string;
+  iconKey?: ProjectIconKey;
   subtitle: {
     id: string;
     en: string;

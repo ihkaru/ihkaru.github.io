@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ProjectItem, Locale } from '../types/portfolio';
-  import { Terminal, Shield, Sparkles, Github, ArrowUpRight, CheckCircle2 } from 'lucide-svelte';
+  import { Terminal, Shield, Sparkles, Github, ArrowUpRight, CheckCircle2, Bot } from 'lucide-svelte';
 
   interface Props {
     project: ProjectItem;
@@ -33,6 +33,7 @@
         <div class="lg:col-span-7 space-y-6">
           <div class="space-y-2">
             <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-white flex items-center gap-3">
+              <Bot class="h-8 w-8 text-emerald-400 shrink-0" />
               <span>{project.title}</span>
             </h2>
             <p class="text-base sm:text-lg text-emerald-400 font-mono font-medium">
@@ -127,7 +128,10 @@
             <!-- Egress Response -->
             <div class="rounded-lg bg-emerald-950/20 border border-emerald-800/30 p-3 space-y-1">
               <div class="flex items-center justify-between text-[11px] text-emerald-400 font-bold">
-                <span>🌸 Aina</span>
+                <span class="flex items-center gap-1.5">
+                  <Bot class="h-3.5 w-3.5 text-emerald-400" />
+                  <span>Aina</span>
+                </span>
                 <span class="text-neutral-400 font-normal">09:41 AM</span>
               </div>
               <p class="text-neutral-200 font-sans text-xs">

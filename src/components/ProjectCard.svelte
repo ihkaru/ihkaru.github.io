@@ -2,6 +2,7 @@
   import type { ProjectItem, Locale } from '../types/portfolio';
   import { ArrowUpRight, Github, Terminal } from 'lucide-svelte';
   import AppVisualPreview from './AppVisualPreview.svelte';
+  import ProjectIcon from './ProjectIcon.svelte';
 
   interface Props {
     project: ProjectItem;
@@ -36,7 +37,8 @@
 
     <!-- Title & Subtitle -->
     <div class="space-y-1.5">
-      <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center justify-between">
+      <h3 class="text-xl font-bold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-2">
+        <ProjectIcon name={project.iconKey} class="h-5 w-5 text-emerald-400 shrink-0" />
         <span>{project.title}</span>
       </h3>
       <p class="text-xs sm:text-sm text-neutral-300 font-reading leading-relaxed">

@@ -2,6 +2,7 @@
   import type { ProjectItem, Locale } from '../types/portfolio';
   import { X, Github, ArrowUpRight, CheckCircle2, Cpu, ShieldAlert, Zap } from 'lucide-svelte';
   import AppVisualPreview from './AppVisualPreview.svelte';
+  import ProjectIcon from './ProjectIcon.svelte';
   import { onMount, onDestroy } from 'svelte';
 
   interface Props {
@@ -67,8 +68,9 @@
           </span>
           <span class="font-mono text-xs text-neutral-500">priority: #{project.priority}</span>
         </div>
-        <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-          {project.title}
+        <h2 id="modal-title" class="text-2xl sm:text-3xl font-bold tracking-tight text-white flex items-center gap-3">
+          <ProjectIcon name={project.iconKey} class="h-7 w-7 text-emerald-400 shrink-0" />
+          <span>{project.title}</span>
         </h2>
         <p class="text-sm sm:text-base text-neutral-300 font-reading leading-relaxed">
           {project.subtitle[locale]}
