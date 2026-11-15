@@ -4,7 +4,7 @@
 
 ---
 
-## 🗺️ Arsitektur Roadmap & Fase Implementasi
+## Arsitektur Roadmap & Fase Implementasi
 
 Roadmap ini terbagi ke dalam **5 Fase Bertahap**:
 
@@ -18,12 +18,12 @@ flowchart LR
 
 ---
 
-## 📌 Rincian Fase & Tautan Dokumen Detail
+## Rincian Fase & Tautan Dokumen Detail
 
 ### [Phase 1: Project Scaffolding & Anti-Slop Design System](file:///root/projects/ihkaru.github.io/docs/phases/01_project_scaffolding_and_design_system.md)
 - Inisialisasi stack Svelte 5 (Runes) + Vite 7 dengan package manager Bun.
-- Setup Tailwind CSS v4, font Google (Space Grotesk, Lora, Space Mono).
-- Kontrak desain `DESIGN.md` (Dials `ENERGY 2 / RHYTHM 2 / MOTION 2`, palet matte monochrome, zero-slop rules).
+- Setup Tailwind CSS v4, tipografi 100% Google Sans (`Google Sans` untuk antarmuka & `Google Sans Text` untuk konten/paragraf, `Space Mono` untuk telemetri/kode).
+- Kontrak desain `DESIGN.md` (Dials `ENERGY 2 / RHYTHM 2 / MOTION 2`, palet matte monochrome, zero-slop rules, zero emoticon dengan proper vector Lucide icons).
 
 ### [Phase 2: Curated Data Layer & System Architecture Models](file:///root/phases/02_curated_data_layer_and_architecture_models.md)
 - Schema TypeScript ketat (`src/types/portfolio.ts`) untuk proyek, metrik riil, dan alur arsitektur.
