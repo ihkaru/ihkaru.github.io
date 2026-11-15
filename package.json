@@ -5,19 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.src.html index.html && cp dist/index.src.html 404.html && cp -r dist/assets/* assets/",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "gate": "node scripts/verify-gate.mjs",
+    "build": "bun run check && vite build && node scripts/sync-dist.mjs && bun run gate",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "test": "bun run gate"
   },
   "dependencies": {
-    "lucide-svelte": "^0.475.0"
+    "clsx": "^2.1.1",
+    "lucide-svelte": "^0.475.0",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tailwindcss/vite": "^4.0.9",
     "@tsconfig/svelte": "^5.0.4",
     "picomatch": "^2.3.1",
-    "svelte": "^5.20.2",
+    "svelte": "5.20.2",
     "svelte-check": "^4.1.4",
     "tailwindcss": "^4.0.9",
     "typescript": "^5.7.3",

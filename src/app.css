@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Google Sans', var(--font-sans);
   background-color: var(--color-canvas);
   color: #f5f5f5;
   overflow-x: hidden;
@@ -43,10 +43,10 @@ a:focus-visible, button:focus-visible {
 
 /* Prose font: Full Google Sans Text */
 p, .font-reading {
-  font-family: var(--font-reading);
+  font-family: 'Google Sans Text', 'Google Sans', var(--font-reading);
 }
 
 /* Monospace font for telemetry and code */
 code, pre, .font-code {
-  font-family: var(--font-mono);
+  font-family: 'Google Sans Code', 'Space Mono', var(--font-mono);
 }

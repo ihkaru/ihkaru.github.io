@@ -1,13 +1,14 @@
 <script lang="ts">
   import type { Locale } from '../types/portfolio';
-  import { Github, Globe } from 'lucide-svelte';
+  import { Github, Globe, Menu } from 'lucide-svelte';
 
   interface Props {
     locale: Locale;
     onToggleLocale: () => void;
+    onToggleMobileDrawer?: () => void;
   }
 
-  let { locale, onToggleLocale }: Props = $props();
+  let { locale, onToggleLocale, onToggleMobileDrawer }: Props = $props();
 </script>
 
 <header class="sticky top-0 z-40 w-full border-b border-neutral-800/80 bg-neutral-950/80 backdrop-blur-md transition-colors">
@@ -37,7 +38,7 @@
       <!-- Language Toggle -->
       <button
         onclick={onToggleLocale}
-        class="flex items-center gap-1.5 rounded-lg border border-neutral-800 bg-neutral-900 px-2.5 py-1.5 text-xs font-mono text-neutral-300 hover:border-neutral-700 hover:text-white transition-colors cursor-pointer min-h-[44px] min-w-[44px]"
+        class="hidden sm:flex items-center gap-1.5 rounded-lg border border-neutral-800 bg-neutral-900 px-2.5 py-1.5 text-xs font-mono text-neutral-300 hover:border-neutral-700 hover:text-white transition-colors cursor-pointer min-h-[44px] min-w-[44px]"
         aria-label="Toggle language"
       >
         <Globe class="h-3.5 w-3.5 text-neutral-400" />
@@ -54,6 +55,17 @@
       >
         <Github class="h-4 w-4" />
       </a>
+
+      <!-- Mobile Menu Trigger Button -->
+      {#if onToggleMobileDrawer}
+        <button
+          onclick={onToggleMobileDrawer}
+          class="flex md:hidden items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 hover:border-neutral-700 hover:text-white transition-colors cursor-pointer min-h-[44px] min-w-[44px]"
+          aria-label="Open mobile navigation drawer"
+        >
+          <Menu class="h-4 w-4" />
+        </button>
+      {/if}
     </div>
   </div>
 </header>
