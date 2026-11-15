@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Locale } from '../types/portfolio';
-  import { Github, Globe, Menu } from 'lucide-svelte';
+  import { Github, Globe, Menu, Linkedin } from 'lucide-svelte';
 
   interface Props {
     locale: Locale;
@@ -45,13 +45,25 @@
         <span class="font-bold">{locale.toUpperCase()}</span>
       </button>
 
-      <!-- GitHub Profile Links -->
+      <!-- Social Links -->
+      <a
+        href="https://www.linkedin.com/in/ihza-fikri-zaki-karunia-89463519b"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden sm:flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 hover:text-blue-400 hover:border-blue-500/40 transition-colors min-h-[44px] min-w-[44px]"
+        aria-label="LinkedIn Profile"
+        title="LinkedIn Profile"
+      >
+        <Linkedin class="h-4 w-4" />
+      </a>
+
       <a
         href="https://github.com/ihkaru"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 hover:border-neutral-700 hover:text-white transition-colors min-h-[44px] min-w-[44px]"
         aria-label="GitHub Profile"
+        title="GitHub Profile"
       >
         <Github class="h-4 w-4" />
       </a>

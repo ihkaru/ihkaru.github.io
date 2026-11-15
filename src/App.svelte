@@ -6,9 +6,10 @@
   import Hero from './components/Hero.svelte';
   import AinaSpotlight from './components/AinaSpotlight.svelte';
   import ProjectGrid from './components/ProjectGrid.svelte';
+  import ExperienceSection from './components/ExperienceSection.svelte';
   import ProjectModal from './components/ProjectModal.svelte';
   import Footer from './components/Footer.svelte';
-  import { X, Bot, Globe } from 'lucide-svelte';
+  import { X, Bot, Globe, MessageSquare, Linkedin, Mail } from 'lucide-svelte';
 
   let locale = $state<Locale>('id');
   let selectedProject = $state<ProjectItem | null>(null);
@@ -92,6 +93,33 @@
               <Bot class="h-4 w-4 text-emerald-400" />
               <span>Aina (あいな) #1</span>
             </a>
+            <div class="text-[10px] uppercase text-neutral-500 tracking-wider pt-2">Saluran Langsung</div>
+            <a
+              href="https://wa.me/6289625345646"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-2.5 rounded-lg bg-neutral-950/70 text-neutral-200 hover:text-emerald-400 border border-neutral-800/80 min-h-[44px]"
+            >
+              <span class="flex items-center gap-2">
+                <MessageSquare class="h-4 w-4 text-emerald-400" />
+                <span>WhatsApp</span>
+              </span>
+              <span class="text-neutral-500 text-[10px]">089625345646</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ihza-fikri-zaki-karunia-89463519b"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-2.5 rounded-lg bg-neutral-950/70 text-neutral-200 hover:text-blue-400 border border-neutral-800/80 min-h-[44px]"
+            >
+              <span class="flex items-center gap-2">
+                <Linkedin class="h-4 w-4 text-blue-400" />
+                <span>LinkedIn</span>
+              </span>
+              <span class="text-neutral-500 text-[10px]">ihza-fikri...</span>
+            </a>
+
             <div class="text-[10px] uppercase text-neutral-500 tracking-wider pt-2">Preferensi</div>
             <button
               onclick={toggleLocale}
@@ -114,7 +142,7 @@
   {/if}
 
   <main class="flex-grow">
-    <!-- Hero Section -->
+    <!-- Hero Section with Profile Photo & Bio -->
     <Hero {locale} />
 
     <!-- Flagship Spotlight: Aina -->
@@ -122,6 +150,9 @@
 
     <!-- Curated Project Grid: Cerdas, Lumis, Propylon, rIDM, FlashLearn, Dokter-V -->
     <ProjectGrid {projects} {locale} onOpenModal={openModal} />
+
+    <!-- Career Experience & Academic Background -->
+    <ExperienceSection {locale} />
   </main>
 
   <Footer {locale} />

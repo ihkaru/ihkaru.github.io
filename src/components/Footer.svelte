@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Locale } from '../types/portfolio';
-  import { Github, Heart, ShieldCheck } from 'lucide-svelte';
+  import { Github, ShieldCheck, Mail, Linkedin, MessageSquare } from 'lucide-svelte';
 
   interface Props {
     locale: Locale;
@@ -17,26 +17,51 @@
       <div class="space-y-1 text-center sm:text-left">
         <div class="flex items-center justify-center sm:justify-start gap-2 font-mono text-sm text-neutral-200 font-bold">
           <span class="text-emerald-400">&gt;</span>
-          <span>ihkaru.github.io</span>
+          <span>Ihza Fikri Zaki Karunia (ihkaru)</span>
         </div>
         <p class="text-xs font-reading text-neutral-500">
           {locale === 'id' 
-            ? 'Portofolio statis bebas AI slop. Dibangun dengan Svelte 5, Vite, dan Tailwind CSS v4.' 
-            : 'Static portfolio built without AI slop. Powered by Svelte 5, Vite, and Tailwind CSS v4.'}
+            ? 'Information System Technician di BPS Mempawah • Alumnus Komputasi Statistik STIS.' 
+            : 'Information System Technician at BPS Mempawah • STIS Computational Statistics Alumnus.'}
         </p>
       </div>
 
       <!-- Links & Standards -->
       <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono">
-        <div class="inline-flex items-center gap-1 text-emerald-400">
-          <ShieldCheck class="h-3.5 w-3.5" />
-          <span>Zero-Mock Standard</span>
-        </div>
+        <a
+          href="https://wa.me/6289625345646"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 hover:text-emerald-400 transition-colors"
+          title="WhatsApp"
+        >
+          <MessageSquare class="h-3.5 w-3.5" />
+          <span>WhatsApp</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ihza-fikri-zaki-karunia-89463519b"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 hover:text-blue-400 transition-colors"
+          title="LinkedIn"
+        >
+          <Linkedin class="h-3.5 w-3.5" />
+          <span>LinkedIn</span>
+        </a>
+        <a
+          href="mailto:ihza2karunia@gmail.com"
+          class="flex items-center gap-1 hover:text-white transition-colors"
+          title="Email"
+        >
+          <Mail class="h-3.5 w-3.5" />
+          <span>Email</span>
+        </a>
         <a
           href="https://github.com/ihkaru"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-1 hover:text-white transition-colors"
+          title="GitHub ihkaru"
         >
           <Github class="h-3.5 w-3.5" />
           <span>ihkaru</span>
@@ -46,12 +71,16 @@
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-1 hover:text-white transition-colors"
+          title="GitHub ipds6104"
         >
           <Github class="h-3.5 w-3.5" />
           <span>ipds6104</span>
         </a>
         <span class="text-neutral-600">|</span>
-        <span class="text-neutral-500">MIT License</span>
+        <div class="inline-flex items-center gap-1 text-emerald-400">
+          <ShieldCheck class="h-3.5 w-3.5" />
+          <span>Zero-Mock</span>
+        </div>
       </div>
 
     </div>
