@@ -37,6 +37,11 @@ Direktori ini memuat hasil riset komprehensif, kurasi teknis, dan kumpulan *agen
      7. **Dokter-V (Sikendis)** — Digitalisasi Transaksi Keuangan, Validasi SBM 2026 & LPD AI (FrankenPHP Octane).
    - Blueprint arsitektur, diagram alur sistem, metrik pembuktian teknis, dan strategi tata letak visual anti-slop.
 
+5. **[05_anti_slop_principles_and_living_ui.md](file:///root/projects/ihkaru.github.io/docs/research/05_anti_slop_principles_and_living_ui.md)**
+   - Analisis fenomena AI Web Slop di industri web modern & ciri-ciri desain khas AI (gradien ungu-cyan, Inter default, bento grid mosaic, em dash marketing fluff).
+   - Panduan de-slopify (palet matte monochrome, tipografi tri-tier, hierarki berbasis keputusan).
+   - Arsitektur *Living UI Components* untuk menghadirkan visual aplikasi hidup tanpa file gambar statis yang berat.
+
 ---
 
 ## 🛠️ Direktori Agent Skills Terpasang
